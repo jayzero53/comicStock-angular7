@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.mainDiv{
+  background: url('./assets/background.png');
+  height: 1080px;
+  width: 1920px;
+  opacity: 10%;
+}
+
+.border-pink{
+  border: 2px solid pink;
+}
+
+.border-green{
+  border: 2px solid green;
+}
+
+.border-blue{
+  border: 2px solid red;
+}
