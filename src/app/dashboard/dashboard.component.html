@@ -1,0 +1,34 @@
+<div class="row">
+
+  <div class="col-4">
+    <div class="row">
+      <div class="col-6" *ngFor="let comic of comics">
+        <p>{{comic.title | slice:0:20 }}</p>
+        <img class="thumbnail"
+             alt="thumbnail"
+             src="{{comic.thumbnail.pathIncludingExtension}}"
+             (click)="handleSelectedComic(comic.id)"
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div *ngIf="selectedComic">
+      <div class="row">
+
+        <div class="col-6">
+          <img src="{{selectedComic.thumbnail.pathIncludingExtension}}" alt="cover art">
+        </div>
+        <div class="col-4 text-center">
+          <h1>{{selectedComic.publisher}}</h1>
+          <h2>{{selectedComic.title}}</h2>
+          <p>{{selectedComic.description}}</p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
